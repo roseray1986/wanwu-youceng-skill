@@ -8,9 +8,9 @@
 
 ## 下载
 
-[下载最新通用安装包](https://github.com/roseray1986/wanwu-youceng-skill/releases/latest/download/knowledge-paper-theater-v3-universal.zip)
+[下载最新通用安装包 V4](https://github.com/roseray1986/wanwu-youceng-skill/releases/latest/download/knowledge-paper-theater-v4-universal.zip)
 
-下载后查看压缩包根目录的 \`INSTALL_通用Agent.md\`。
+下载后查看压缩包根目录的 `INSTALL_通用Agent.md`。
 
 ## 它能做什么
 
@@ -28,30 +28,39 @@ Skill 会先检查当前 Agent 的能力，再走可完成的路径：
 | 当前能力 | 输出方式 |
 | --- | --- |
 | 有生图或已有参考图 | 先固定一个统一母场景，再延展三幕 |
+| 有动态视频模型 | 只生成增强解释的关键动作镜头，再由可编辑时间线完成文字、旁白与1080P成片 |
 | 无生图，但有 SVG / HTML / Canvas / 幻灯片能力 | 制作可编辑的分层纸雕分镜 |
 | 没有绘图或渲染能力 | 交付完整制作包：分镜、镜头、文案、提示词、资产清单 |
 | 没有 TTS 或视频渲染能力 | 冻结旁白与语义节奏，等待真实音频后再逐字同步 |
 
 没有任何一种模型，不会让 Skill 停在“无法执行”；但它也不会把未生成的内容说成已生成。
 
+## V4 新增
+
+- 支持可选动态镜头路径，以及文生视频、首尾帧和参考图模式；
+- 720P生成镜头进入1080×1920画布后必须重新检查清晰度与连续性；
+- 旁白冻结前先检查完整意群，修改音频后重新生成逐字时间戳；
+- 官方 Skill 话题可用“能力证明＋知识悬念”开头，但仓库链接和安装说明不占用前8秒；
+- API 密钥不进入 Skill、项目文件、提示词、日志或公开仓库。
+
 ## 安装
 
-将解压出的 \`knowledge-paper-theater\` 文件夹放入你的 Agent 所识别的 Skills 目录，再重载 Skills。常见目录示例：
+将解压出的 `knowledge-paper-theater` 文件夹放入你的 Agent 所识别的 Skills 目录，再重载 Skills。常见目录示例：
 
-\`\`\`text
+```text
 <项目根目录>/.agents/skills/knowledge-paper-theater/
 <用户目录>/.codex/skills/knowledge-paper-theater/
 <用户目录>/.claude/skills/knowledge-paper-theater/
-\`\`\`
+```
 
-确认 \`SKILL.md\` 位于该文件夹的第一层。
+确认 `SKILL.md` 位于该文件夹的第一层。
 
 ## 调用示例
 
-\`\`\`text
+```text
 使用 knowledge-paper-theater，把“没有事故为什么高速也会堵车”做成一条抖音知识短片方案。
 先检查你是否具备生图、矢量绘制、渲染和旁白能力；按可用能力选择执行路径。
-\`\`\`
+```
 
 ## 已发布案例
 
@@ -59,6 +68,7 @@ Skill 会先检查当前 Agent 的能力，再走可完成的路径：
 | --- | --- |
 | [台风、铁锈、爆米花](https://github.com/roseray1986/wanwu-youceng-skill/releases/download/v1.0.0/knowledge-paper-theater-showcase-v8-all-scenes-safe-final.mp4) | 用三类知识题材验证统一世界、旁白与安全区流程 |
 | [鲁珀特之泪](https://github.com/roseray1986/wanwu-youceng-skill/releases/download/v1.0.0/prince-ruperts-drop-final-1080x1920.mp4) | 材料科学题材：圆头抗砸、细尾一断爆碎 |
+| [极光为什么会跳舞](aurora-magnetic-start-v1.png) | 空间科学题材：太阳风、地球磁场与高层大气的连续可视化 |
 
 ## 设计原则
 
