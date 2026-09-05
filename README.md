@@ -8,7 +8,7 @@
 
 ## 下载
 
-[下载最新通用安装包 V4](https://github.com/roseray1986/wanwu-youceng-skill/releases/latest/download/knowledge-paper-theater-v4-universal.zip)
+[下载最新通用安装包 V5](https://github.com/roseray1986/wanwu-youceng-skill/releases/latest/download/knowledge-paper-theater-v5-universal.zip)
 
 下载后查看压缩包根目录的 `INSTALL_通用Agent.md`。
 
@@ -35,13 +35,14 @@ Skill 会先检查当前 Agent 的能力，再走可完成的路径：
 
 没有任何一种模型，不会让 Skill 停在“无法执行”；但它也不会把未生成的内容说成已生成。
 
-## V4 新增
+## V5 新增
 
-- 支持可选动态镜头路径，以及文生视频、首尾帧和参考图模式；
-- 720P生成镜头进入1080×1920画布后必须重新检查清晰度与连续性；
-- 旁白冻结前先检查完整意群，修改音频后重新生成逐字时间戳；
-- 官方 Skill 话题可用“能力证明＋知识悬念”开头，但仓库链接和安装说明不占用前8秒；
-- API 密钥不进入 Skill、项目文件、提示词、日志或公开仓库。
+- 固化“知识钩子 → 因果解释 → Skill 方法证明 → 三步复用 → 分享/CTA”完整结构；
+- 三层因果不再等于三个镜头，按语义拆分足够的单一职责视觉节拍；
+- 最终旁白替换后重新转写、重建语义锚点并复检画面；
+- 生成视频负责真实动作，精确剖面和内部机理由可控图形完成；
+- Agnes 默认用公开素材直链调用 API，并对结果进行完整、裁切、合成或拒绝的分级验收；
+- 封面、安全区、逐字同步和编码后复检进入同一交付闭环。
 
 ## 安装
 
